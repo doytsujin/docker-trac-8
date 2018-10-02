@@ -1,0 +1,17 @@
+# trac.yml
+# Sample docker-compose file for running Trac container as a service.
+
+version: '3.1'
+
+services:
+  trac:
+    image: techchihuahua/trac-single:1.2.3-alpine
+    ports:
+      - 8888:80
+    volumes:
+      - trac_project:/srv/trac
+
+volumes:
+  trac_project:
+
+# ------------------------------------------------------------------------
